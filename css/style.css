@@ -23,7 +23,139 @@
 @import url(jquery-ui.css);
 @import url(nice-select.css);
 
+/*--------------------------------------------------------------------- button ---------------------------------------------------------------------*/
+
+
+/* General button style */
+.btn {
+  border: none;
+  font-family: 'Lato';
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* Pseudo elements for icons */
+.btn:before {
+  font-family: 'FontAwesome';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+
+
+
+
+
+
+/* Button 3 */
+.btn-4 {
+  background: #34495e;
+  color: #fff;
+}
+
+.btn-4:hover {
+  background: #2c3e50;
+}
+
+.btn-4:active {
+  background: #2c3e50;
+  top: 2px;
+}
+
+.btn-4:before {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  line-height: 3;
+  font-size: 140%;
+  width: 60px;
+}
+
+
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
+
+
+@media only screen and (min-width: 601px) {
+#containerYT {
+    width:100%;
+    text-align:center;
+}
+
+#leftYT {
+    float:left;
+    width:auto;
+}
+
+#centerYT {
+    display: inline-block;
+    margin:0 auto;
+    width:auto;
+}
+
+#rightYT {
+    float:right;
+    width:auto;
+}
+}
+
+@media only screen and (max-width: 600px) {
+  #containerYT {
+    width:auto;
+    text-align:center;
+}
+
+#leftYT {
+
+    width:auto;
+    margin:auto;
+}
+
+#centerYT {
+
+    margin:auto;
+    width:auto;
+}
+
+#rightYT {
+
+    width:auto;
+    margin:auto;
+}
+}
+
+
 
 * {
      box-sizing: border-box !important;
