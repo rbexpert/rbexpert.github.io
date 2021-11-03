@@ -115,12 +115,13 @@ var x = setInterval(function() {
       <!-- end header inner -->
       <!-- end header -->
       <!-- banner -->
+
       <section class="banner_main">
          <div class="container">
             <div class="row d_flex">
                <div class="col-md-5">
                   <div class="text-bg">
-                     <h1>RB EXPERT</h1>
+                     <img src="images/rb-logo.png" />
                      <span>Version 2022</span>
                      <p>We share our next-generation trading software on MetaTrader to help every traders become profitable without the pressure of making mistakes.</p>
                      <a id="demo" style="background-color:#5E47FE; color:white;"></a>
@@ -128,12 +129,40 @@ var x = setInterval(function() {
                </div>
                <div class="col-md-7">
                   <div class="text-img">
-                     <figure><img src="images/img.png"/ id="img1"></figure>
+                    <div id ="myContainer">
+                    <div id ="myAnimation"><img src="https://rbexpert.github.io/images/img.png" onload="myMove()" id="img1"></div>
+                    </div>
                   </div>
                </div>
             </div>
          </div>
       </section>
+      <script>
+
+      var id = null;
+      function myMove() {
+        var elem = document.getElementById("myAnimation");
+        var pos = 0;
+        var state = 0;
+        clearInterval(id);
+        id = setInterval(frame, 30);
+        function frame() {
+          if (state == 0) {
+            pos += 0.5;
+            elem.style.top = pos + 'px';
+            if (pos == 15){
+      	state = 1;
+      }
+          } else {
+            pos -= 0.5;
+            elem.style.top = pos + 'px';
+            if(pos == 0){
+      	state = 0;
+      }
+          }
+        }
+      }
+      </script>
       <!-- end banner -->
       <!-- Hosting -->
       <div id="about" class="hosting">
